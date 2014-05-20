@@ -1,0 +1,421 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="ie6 oldie"> <![endif]-->
+<!--[if IE 7]>    <html class="ie7 oldie"> <![endif]-->
+<!--[if IE 8]>    <html class="ie8 oldie"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="">
+<!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title></title>
+<link href="css/boilerplate.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<!--[if lt IE 9]>
+<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<link rel="stylesheet" href="css/jquery.mobile-1.3.2.min.css" />
+<script src="js/jquery-1.9.1.min.js"></script>
+<script src="js/jquery.mobile-1.3.2.min.js"></script>
+<script src="js/respond.min.js"></script>
+<script src="js/calculate.js"></script>
+<script>
+$(document).ready(function (e) {
+		var name=localStorage.getItem("name");
+	$("#top-bar").append(name);
+	
+	
+var se_rice=sessionStorage.getItem('se_rice');
+var se_ricefrac=sessionStorage.getItem('se_ricefrac');
+var se_khichari=sessionStorage.getItem('se_khichari');
+var se_khicharifrac=sessionStorage.getItem('se_khicharifrac');
+var se_pulao=sessionStorage.getItem('se_pulao');
+var se_pulaofrac=sessionStorage.getItem('se_pulaofrac');
+var se_paratha=sessionStorage.getItem('se_paratha');
+var se_parathafrac=sessionStorage.getItem('se_parathafrac');
+var se_phulka=sessionStorage.getItem('se_phulka');
+var se_phulkafrac=sessionStorage.getItem('se_phulkafrac');
+var se_puri=sessionStorage.getItem('se_puri');
+var se_purifrac=sessionStorage.getItem('se_purifrac');
+var se_bhatura=sessionStorage.getItem('se_bhatura');
+var se_bhaturafrac=sessionStorage.getItem('se_bhaturafrac');
+var se_pot_paratha=sessionStorage.getItem('se_pot_paratha');
+var se_pot_parathafrac=sessionStorage.getItem('se_pot_parathafrac');
+var se_ragiroti=sessionStorage.getItem('se_ragiroti');
+var se_ragirotifrac=sessionStorage.getItem('se_ragirotifrac');
+
+
+$('#rice option[value="'+se_rice+'"]').prop('selected', true);
+$('#ricefrac option[value="'+se_ricefrac+'"]').prop('selected', true);
+$('#khichari option[value="'+se_khichari+'"]').prop('selected', true);
+$('#khicharifrac option[value="'+se_khicharifrac+'"]').prop('selected', true);
+$('#pulao option[value="'+se_pulao+'"]').prop('selected', true);
+$('#pulaofrac option[value="'+se_pulaofrac+'"]').prop('selected', true);
+$('#paratha option[value="'+se_paratha+'"]').prop('selected', true);
+$('#parathafrac option[value="'+se_parathafrac+'"]').prop('selected', true);
+$('#phulka option[value="'+se_phulka+'"]').prop('selected', true);
+$('#phulkafrac option[value="'+se_phulkafrac+'"]').prop('selected', true);
+$('#puri option[value="'+se_puri+'"]').prop('selected', true);
+$('#purifrac option[value="'+se_purifrac+'"]').prop('selected', true);
+$('#bhatura option[value="'+se_bhatura+'"]').prop('selected', true);
+$('#bhaturafrac option[value="'+se_bhaturafrac+'"]').prop('selected', true);
+$('#pot_paratha option[value="'+se_pot_paratha+'"]').prop('selected', true);
+$('#pot_parathafrac option[value="'+se_pot_parathafrac+'"]').prop('selected', true);
+$('#ragiroti option[value="'+se_ragiroti+'"]').prop('selected', true);
+$('#ragirotifrac option[value="'+se_ragirotifrac+'"]').prop('selected', true);
+
+
+
+$("#rice").selectmenu("refresh");
+$("#ricefrac").selectmenu("refresh");
+$("#khichari").selectmenu("refresh");
+$("#khicharifrac").selectmenu("refresh");
+$("#pulao").selectmenu("refresh");
+$("#pulaofrac").selectmenu("refresh");
+$("#paratha").selectmenu("refresh");
+$("#parathafrac").selectmenu("refresh");
+$("#phulka").selectmenu("refresh");
+$("#phulkafrac").selectmenu("refresh");
+$("#puri").selectmenu("refresh");
+$("#purifrac").selectmenu("refresh");
+$("#bhatura").selectmenu("refresh");
+$("#bhaturafrac").selectmenu("refresh");
+$("#pot_paratha").selectmenu("refresh");
+$("#pot_parathafrac").selectmenu("refresh");
+$("#ragiroti").selectmenu("refresh");
+$("#ragirotifrac").selectmenu("refresh");
+
+		
+	
+$(".savenxt").click(function(e) {
+		cereal();
+  window.location='currydal.html';
+});
+});
+</script>
+</head>
+<body>
+<div class="gridContainer clearfix">
+ <div id="maincontainer">
+  <div id="insidecont">
+   <div id="top-bar" class="top-bar">
+   </div>
+   <div class="clear">
+   </div>
+   <div id="header" data-role="header">
+    <p>Cereal preparations</p>
+    <a href="#nav-panel" data-icon="bars" data-iconshadow="false"
+        data-direction="reverse" data-transition="slide"
+        data-iconpos="notext" class="ui-btn-right">Menu </a>
+   </div>
+   <div class="clear"></div>
+   <div id="menu-main">
+    <div class="optcontainer">
+     <div id="headcontainer">
+      <div class="head1"><span> Food items </span></div>
+      <div class="head2"><span> Portion eaten </span></div>
+     </div>
+     <div class="clear"></div>
+     <form>
+      <div class="ui-field-contain">
+       <label for="rice">Rice</label>
+       <select name="rice" id="rice">
+        <option value="">&nbsp;</option>
+        <option value="0">0 Katori</option>
+        <option value="1">1 Katori</option>
+        <option value="2">2 Katoris</option>
+        <option value="3">3 Katoris</option>
+        <option value="4">4 Katoris</option>
+        <option value="5">5 Katoris</option>
+        <option value="6">6 Katoris</option>
+        <option value="7">7 Katoris</option>
+        <option value="8">8 Katoris</option>
+        <option value="9">9 Katoris</option>
+        <option value="10">10 Katoris</option>
+        <option value="11">11 Katoris</option>
+        <option value="12">12 Katoris</option>
+        <option value="13">13 Katoris</option>
+        <option value="14">14 Katoris</option>
+        <option value="15">15 Katoris</option>
+       </select>
+       <select name="ricefrac" id="ricefrac">
+        <option value="">&nbsp;</option>
+        <option value=".0">0 Katori</option>
+        <option value=".25">1/4 Katoris</option>
+        <option value=".50">1/2 Katoris</option>
+        <option value=".75">3/4 Katoris</option>
+       </select>
+      </div>
+      <div class="ui-field-contain">
+       <label for="khichari"><i>Khichari</i></label>
+       <select name="khichari" id="khichari">
+        <option value="">&nbsp;</option>
+        <option value="0">0 Katori</option>
+        <option value="1">1 Katori</option>
+        <option value="2">2 Katoris</option>
+        <option value="3">3 Katoris</option>
+        <option value="4">4 Katoris</option>
+        <option value="5">5 Katoris</option>
+        <option value="6">6 Katoris</option>
+        <option value="7">7 Katoris</option>
+        <option value="8">8 Katoris</option>
+        <option value="9">9 Katoris</option>
+        <option value="10">10 Katoris</option>
+        <option value="11">11 Katoris</option>
+        <option value="12">12 Katoris</option>
+        <option value="13">13 Katoris</option>
+        <option value="14">14 Katoris</option>
+        <option value="15">15 Katoris</option>
+       </select>
+       <select name="khicharifrac" id="khicharifrac">
+        <option value="">&nbsp;</option>
+        <option value=".0">0 Katori</option>
+        <option value=".25">1/4 Katoris</option>
+        <option value=".50">1/2 Katoris</option>
+        <option value=".75">3/4 Katoris</option>
+       </select>
+      </div>
+      <div class="ui-field-contain">
+       <label for="pulao">Pulao</label>
+       <select name="pulao" id="pulao">
+        <option value="">&nbsp;</option>
+        <option value="0">0 Katori</option>
+        <option value="1">1 Katori</option>
+        <option value="2">2 Katoris</option>
+        <option value="3">3 Katoris</option>
+        <option value="4">4 Katoris</option>
+        <option value="5">5 Katoris</option>
+        <option value="6">6 Katoris</option>
+        <option value="7">7 Katoris</option>
+        <option value="8">8 Katoris</option>
+        <option value="9">9 Katoris</option>
+        <option value="10">10 Katoris</option>
+        <option value="11">11 Katoris</option>
+        <option value="12">12 Katoris</option>
+        <option value="13">13 Katoris</option>
+        <option value="14">14 Katoris</option>
+        <option value="15">15 Katoris</option>
+       </select>
+       <select name="pulaofrac" id="pulaofrac">
+        <option value="">&nbsp;</option>
+        <option value=".0">0 Katori</option>
+        <option value=".25">1/4 Katoris</option>
+        <option value=".50">1/2 Katoris</option>
+        <option value=".75">3/4 Katoris</option>
+       </select>
+      </div>
+      <div class="ui-field-contain">
+       <label for="paratha"><i>Paratha</i></label>
+       <select name="paratha" id="paratha">
+        <option value="">&nbsp;</option>
+        <option value="0">0 No</option>
+        <option value="1">1 No</option>
+        <option value="2">2 Nos</option>
+        <option value="3">3 Nos</option>
+        <option value="4">4 Nos</option>
+        <option value="5">5 Nos</option>
+        <option value="6">6 Nos</option>
+        <option value="7">7 Nos</option>
+        <option value="8">8 Nos</option>
+        <option value="9">9 Nos</option>
+        <option value="10">10 Nos</option>
+        <option value="11">11 Nos</option>
+        <option value="12">12 Nos</option>
+        <option value="13">13 Nos</option>
+        <option value="14">14 Nos</option>
+        <option value="15">15 Nos</option>
+       </select>
+       <select name="parathafrac" id="parathafrac">
+        <option value="">&nbsp;</option>
+        <option value=".0">0</option>
+        <option value=".25">1/4 </option>
+        <option value=".50">1/2 </option>
+        <option value=".75">3/4 </option>
+       </select>
+      </div>
+      <div class="ui-field-contain">
+       <label for="phulka"><i>Phulka</i></label>
+       <select name="phulka" id="phulka">
+        <option value="">&nbsp;</option>
+        <option value="0">0 No</option>
+        <option value="1">1 No</option>
+        <option value="2">2 Nos</option>
+        <option value="3">3 Nos</option>
+        <option value="4">4 Nos</option>
+        <option value="5">5 Nos</option>
+        <option value="6">6 Nos</option>
+        <option value="7">7 Nos</option>
+        <option value="8">8 Nos</option>
+        <option value="9">9 Nos</option>
+        <option value="10">10 Nos</option>
+        <option value="11">11 Nos</option>
+        <option value="12">12 Nos</option>
+        <option value="13">13 Nos</option>
+        <option value="14">14 Nos</option>
+        <option value="15">15 Nos</option>
+       </select>
+       <select name="phulkafrac" id="phulkafrac">
+        <option value="">&nbsp;</option>
+        <option value=".0">0 </option>
+        <option value=".25">1/4 </option>
+        <option value=".50">1/2 </option>
+        <option value=".75">3/4 </option>
+       </select>
+      </div>
+      <div class="ui-field-contain">
+       <label for="puri"><i>Puri</i></label>
+       <select name="puri" id="puri">
+        <option value="">&nbsp;</option>
+        <option value="0">0 No</option>
+        <option value="1">1 No</option>
+        <option value="2">2 Nos</option>
+        <option value="3">3 Nos</option>
+        <option value="4">4 Nos</option>
+        <option value="5">5 Nos</option>
+        <option value="6">6 Nos</option>
+        <option value="7">7 Nos</option>
+        <option value="8">8 Nos</option>
+        <option value="9">9 Nos</option>
+        <option value="10">10 Nos</option>
+        <option value="11">11 Nos</option>
+        <option value="12">12 Nos</option>
+        <option value="13">13 Nos</option>
+        <option value="14">14 Nos</option>
+        <option value="15">15 Nos</option>
+       </select>
+       <select name="purifrac" id="purifrac">
+        <option value="">&nbsp;</option>
+        <option value=".0">0 </option>
+        <option value=".25">1/4 </option>
+        <option value=".50">1/2 </option>
+        <option value=".75">3/4 </option>
+       </select>
+      </div>
+      <div class="ui-field-contain">
+       <label for="bhatura"><i>Bhatura</i></label>
+       <select name="bhatura" id="bhatura">
+        <option value="">&nbsp;</option>
+        <option value="0">0 No</option>
+        <option value="1">1 No</option>
+        <option value="2">2 Nos</option>
+        <option value="3">3 Nos</option>
+        <option value="4">4 Nos</option>
+        <option value="5">5 Nos</option>
+        <option value="6">6 Nos</option>
+        <option value="7">7 Nos</option>
+        <option value="8">8 Nos</option>
+        <option value="9">9 Nos</option>
+        <option value="10">10 Nos</option>
+        <option value="11">11 Nos</option>
+        <option value="12">12 Nos</option>
+        <option value="13">13 Nos</option>
+        <option value="14">14 Nos</option>
+        <option value="15">15 Nos</option>
+       </select>
+       <select name="bhaturafrac" id="bhaturafrac">
+        <option value="">&nbsp;</option>
+        <option value=".0">0 </option>
+        <option value=".25">1/4 </option>
+        <option value=".50">1/2 </option>
+        <option value=".75">3/4 </option>
+       </select>
+      </div>
+      <div class="ui-field-contain">
+       <label for="pot_paratha">Potato <i>paratha</i></label>
+       <select name="pot_paratha" id="pot_paratha">
+        <option value="">&nbsp;</option>
+        <option value="0">0 No</option>
+        <option value="1">1 No</option>
+        <option value="2">2 Nos</option>
+        <option value="3">3 Nos</option>
+        <option value="4">4 Nos</option>
+        <option value="5">5 Nos</option>
+        <option value="6">6 Nos</option>
+        <option value="7">7 Nos</option>
+        <option value="8">8 Nos</option>
+        <option value="9">9 Nos</option>
+        <option value="10">10 Nos</option>
+        <option value="11">11 Nos</option>
+        <option value="12">12 Nos</option>
+        <option value="13">13 Nos</option>
+        <option value="14">14 Nos</option>
+        <option value="15">15 Nos</option>
+       </select>
+       <select name="pot_parathafrac" id="pot_parathafrac">
+        <option value="">&nbsp;</option>
+        <option value=".0">0 </option>
+        <option value=".25">1/4 </option>
+        <option value=".50">1/2 </option>
+        <option value=".75">3/4 </option>
+       </select>
+      </div>
+      <div class="ui-field-contain">
+       <label for="ragiroti"><i>Ragi roti</i></label>
+       <select name="ragiroti" id="ragiroti">
+        <option value="">&nbsp;</option>
+        <option value="0">0 No</option>
+        <option value="1">1 No</option>
+        <option value="2">2 Nos</option>
+        <option value="3">3 Nos</option>
+        <option value="4">4 Nos</option>
+        <option value="5">5 Nos</option>
+        <option value="6">6 Nos</option>
+        <option value="7">7 Nos</option>
+        <option value="8">8 Nos</option>
+        <option value="9">9 Nos</option>
+        <option value="10">10 Nos</option>
+        <option value="11">11 Nos</option>
+        <option value="12">12 Nos</option>
+        <option value="13">13 Nos</option>
+        <option value="14">14 Nos</option>
+        <option value="15">15 Nos</option>
+       </select>
+       <select name="ragirotifrac" id="ragirotifrac">
+        <option value="">&nbsp;</option>
+        <option value=".0">0 </option>
+        <option value=".25">1/4 </option>
+        <option value=".50">1/2 </option>
+        <option value=".75">3/4 </option>
+       </select>
+      </div>
+     </form>
+     
+    </div><!--optcontainer -->
+   </div>
+  </div>
+  <div class="clear">
+  </div>
+  <div class="navigation" data-role="footer" data-position="fixed">
+   <div id="prev"><a href="milkpdt.html" data-ajax="false"><img src="images/prevarrow.png"/></a>
+   </div>
+   <div id="next">
+    <input name="savenxt" type="button" value="Save & Next" class="savenxt" data-role="none">
+   </div>
+  </div>
+  <div data-role="panel" data-position="right" data-position-fixed="true" data-display="overlay" data-theme="c" id="nav-panel">
+   <ul data-role="listview">
+    <li data-icon="false" class="listitem"><a href="milkpdt.html" data-ajax="false">Milk and milk products</a>
+    </li>
+    <li data-icon="false" class="listitem"><a href="cereal.html" data-ajax="false">Cereal preparations</a>
+    </li>
+    <li data-icon="false" class="listitem"><a href="currydal.html" data-ajax="false">Curry/dal preparations</a>
+    </li>
+    <li data-icon="false" class="listitem"><a href="veg-gravy.html" data-ajax="false">Vegetable - gravy</a>
+    </li>
+    <li data-icon="false" class="listitem"><a href="veg-dry.html" data-ajax="false">Vegetable - dry</a>
+    </li>
+    <li data-icon="false" class="listitem"><a href="snacks.html" data-ajax="false">Savory snacks</a>
+    </li>
+    <li data-icon="false" class="listitem"><a href="sweets.html" data-ajax="false">Sweets</a>
+    </li>
+    <li data-icon="false" class="listitem"><a href="nonveg.html" data-ajax="false">Non-vegetarian foods</a>
+    </li>
+    <li data-icon="false" class="listitem"><a href="others.html" data-ajax="false">Other preparations</a>
+    </li>
+   </ul>
+  </div>
+ </div>
+</div>
+<!-- /panel -->
+</body>
+</html>

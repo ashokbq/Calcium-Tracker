@@ -1,0 +1,278 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="ie6 oldie"> <![endif]-->
+<!--[if IE 7]>    <html class="ie7 oldie"> <![endif]-->
+<!--[if IE 8]>    <html class="ie8 oldie"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="">
+<!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title></title>
+<link href="css/boilerplate.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<!--[if lt IE 9]>
+<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<link rel="stylesheet" href="css/jquery.mobile-1.3.2.min.css" />
+<script src="js/jquery-1.9.1.min.js"></script>
+<script src="js/jquery.mobile-1.3.2.min.js"></script>
+<script src="js/respond.min.js"></script>
+<script src="js/calculate.js"></script>
+<script>
+$(document).ready(function (e) {
+		var name=localStorage.getItem("name");
+	$("#top-bar").append(name);
+	
+var se_fishfillet=sessionStorage.getItem('se_fishfillet');
+var se_fishfilletfrac=sessionStorage.getItem('se_fishfilletfrac');
+var se_fishfried=sessionStorage.getItem('se_fishfried');
+var se_fishfriedfrac=sessionStorage.getItem('se_fishfriedfrac');
+var se_muttoncurry=sessionStorage.getItem('se_muttoncurry');
+var se_muttoncurryfrac=sessionStorage.getItem('se_muttoncurryfrac');
+var se_prawncurry=sessionStorage.getItem('se_prawncurry');
+var se_prawncurryfrac=sessionStorage.getItem('se_prawncurryfrac');
+var se_dumchicken=sessionStorage.getItem('se_dumchicken');
+var se_dumchickenfrac=sessionStorage.getItem('se_dumchickenfrac');
+
+
+$('#fishfillet option[value="'+se_fishfillet+'"]').prop('selected', true);
+$('#fishfilletfrac option[value="'+se_fishfilletfrac+'"]').prop('selected', true);
+$('#fishfried option[value="'+se_fishfried+'"]').prop('selected', true);
+$('#fishfriedfrac option[value="'+se_fishfriedfrac+'"]').prop('selected', true);
+$('#muttoncurry option[value="'+se_muttoncurry+'"]').prop('selected', true);
+$('#muttoncurryfrac option[value="'+se_muttoncurryfrac+'"]').prop('selected', true);
+$('#prawncurry option[value="'+se_prawncurry+'"]').prop('selected', true);
+$('#prawncurryfrac option[value="'+se_prawncurryfrac+'"]').prop('selected', true);
+$('#dumchicken option[value="'+se_dumchicken+'"]').prop('selected', true);
+$('#dumchickenfrac option[value="'+se_dumchickenfrac+'"]').prop('selected', true);
+
+
+$("#fishfillet").selectmenu("refresh");
+$("#fishfilletfrac").selectmenu("refresh");
+$("#fishfried").selectmenu("refresh");
+$("#fishfriedfrac").selectmenu("refresh");
+$("#muttoncurry").selectmenu("refresh");
+$("#muttoncurryfrac").selectmenu("refresh");
+$("#prawncurry").selectmenu("refresh");
+$("#prawncurryfrac").selectmenu("refresh");
+$("#dumchicken").selectmenu("refresh");
+$("#dumchickenfrac").selectmenu("refresh");
+	
+$(".savenxt").click(function(e) {
+	nonveg();
+  window.location="others.html";
+});
+});
+</script>
+</head>
+<body>
+<div class="gridContainer clearfix">
+ <div id="maincontainer">
+  <div id="insidecont">
+
+  <div id="top-bar" class="top-bar"> </div>
+  <div class="clear">  </div>
+   <div id="header" data-role="header">
+    <p>Non-vegetarian foods</p>
+    <a href="#nav-panel" data-icon="bars" data-iconshadow="false"
+        data-direction="reverse" data-transition="slide"
+        data-iconpos="notext" class="ui-btn-right">Menu </a>
+   </div>
+   <div class="clear"></div>
+   <div id="menu-main">
+    <div class="optcontainer">
+     <div id="headcontainer">
+      <div class="head1"><span> Food items </span></div>
+      <div class="head2"><span> Portion eaten </span></div>
+     </div>
+     <div class="clear"></div>
+     <form>
+      <div class="ui-field-contain">
+       <label for="fishfillet">Fish fillet</label>
+       <select name="fishfillet" id="fishfillet">
+        <option value="">&nbsp;</option>
+        <option value="0">0 Piece</option>
+        <option value="1">1 Pieces</option>
+        <option value="2">2 Pieces</option>
+        <option value="3">3 Pieces</option>
+        <option value="4">4 Pieces</option>
+        <option value="5">5 Pieces</option>
+        <option value="6">6 Pieces</option>
+        <option value="7">7 Pieces</option>
+        <option value="8">8 Pieces</option>
+        <option value="9">9 Pieces</option>
+        <option value="10">10 Pieces</option>
+        <option value="11">11 Pieces</option>
+        <option value="12">12 Pieces</option>
+        <option value="13">13 Pieces</option>
+        <option value="14">14 Pieces</option>
+        <option value="15">15 Pieces</option>
+       </select>
+       <select name="fishfilletfrac" id="fishfilletfrac">
+        <option value="">&nbsp;</option>
+        <option value=".0">0 Piece</option>
+        <option value=".25">1/4 Pieces</option>
+        <option value=".50">1/2 Pieces</option>
+        <option value=".75">3/4 Pieces</option>
+       </select>
+      </div>
+      <div class="ui-field-contain">
+       <label for="fishfried">Fried fish</label>
+       <select name="fishfried" id="fishfried">
+        <option value="">&nbsp;</option>
+        <option value="0">0 Piece</option>
+        <option value="1">1 Pieces</option>
+        <option value="2">2 Pieces</option>
+        <option value="3">3 Pieces</option>
+        <option value="4">4 Pieces</option>
+        <option value="5">5 Pieces</option>
+        <option value="6">6 Pieces</option>
+        <option value="7">7 Pieces</option>
+        <option value="8">8 Pieces</option>
+        <option value="9">9 Pieces</option>
+        <option value="10">10 Pieces</option>
+        <option value="11">11 Pieces</option>
+        <option value="12">12 Pieces</option>
+        <option value="13">13 Pieces</option>
+        <option value="14">14 Pieces</option>
+        <option value="15">15 Pieces</option>
+       </select>
+       <select name="fishfriedfrac" id="fishfriedfrac">
+        <option value="">&nbsp;</option>
+        <option value=".0">0 Piece</option>
+        <option value=".25">1/4 Pieces</option>
+        <option value=".50">1/2 Pieces</option>
+        <option value=".75">3/4 Pieces</option>
+       </select>
+      </div>
+      <div class="ui-field-contain">
+       <label for="muttoncurry">Mutton ball curry</label>
+       <select name="muttoncurry" id="muttoncurry">
+        <option value="">&nbsp;</option>
+        <option value="0">0 Katori</option>
+        <option value="1">1 Katori</option>
+        <option value="2">2 Katoris</option>
+        <option value="3">3 Katoris</option>
+        <option value="4">4 Katoris</option>
+        <option value="5">5 Katoris</option>
+        <option value="6">6 Katoris</option>
+        <option value="7">7 Katoris</option>
+        <option value="8">8 Katoris</option>
+        <option value="9">9 Katoris</option>
+        <option value="10">10 Katoris</option>
+        <option value="11">11 Katoris</option>
+        <option value="12">12 Katoris</option>
+        <option value="13">13 Katoris</option>
+        <option value="14">14 Katoris</option>
+        <option value="15">15 Katoris</option>
+       </select>
+       <select name="muttoncurryfrac" id="muttoncurryfrac">
+        <option value="">&nbsp;</option>
+        <option value="2">2 Pieces</option>
+        <option value="3">3 Pieces</option>
+        <option value="4">4 Pieces</option>
+        <option value="5">5 Pieces</option>
+        <option value="6">6 Pieces</option>
+        <option value="7">7 Pieces</option>
+        <option value="8">8 Pieces</option>
+       </select>
+      </div>
+      <div class="ui-field-contain">
+       <label for="prawncurry">Prawn curry</label>
+       <select name="prawncurry" id="prawncurry">
+        <option value="">&nbsp;</option>
+        <option value="0">0 Katori</option>
+        <option value="1">1 Katori</option>
+        <option value="2">2 Katoris</option>
+        <option value="3">3 Katoris</option>
+        <option value="4">4 Katoris</option>
+        <option value="5">5 Katoris</option>
+        <option value="6">6 Katoris</option>
+        <option value="7">7 Katoris</option>
+        <option value="8">8 Katoris</option>
+        <option value="9">9 Katoris</option>
+        <option value="10">10 Katoris</option>
+        <option value="11">11 Katoris</option>
+        <option value="12">12 Katoris</option>
+        <option value="13">13 Katoris</option>
+        <option value="14">14 Katoris</option>
+        <option value="15">15 Katoris</option>
+       </select>
+       <select name="prawncurryfrac" id="prawncurryfrac">
+        <option value="">&nbsp;</option>
+        <option value=".0">0 Katori</option>
+        <option value=".25">1/4 Katoris</option>
+        <option value=".50">1/2 Katoris</option>
+        <option value=".75">3/4 Katoris</option>
+       </select>
+      </div>
+      <div class="ui-field-contain">
+       <label for="dumchicken"><i>Dum</i> chicken</label>
+       <select name="dumchicken" id="dumchicken">
+        <option value="">&nbsp;</option>
+        <option value="0">0 Katori</option>
+        <option value="1">1 Katori</option>
+        <option value="2">2 Katoris</option>
+        <option value="3">3 Katoris</option>
+        <option value="4">4 Katoris</option>
+        <option value="5">5 Katoris</option>
+        <option value="6">6 Katoris</option>
+        <option value="7">7 Katoris</option>
+        <option value="8">8 Katoris</option>
+        <option value="9">9 Katoris</option>
+        <option value="10">10 Katoris</option>
+        <option value="11">11 Katoris</option>
+        <option value="12">12 Katoris</option>
+        <option value="13">13 Katoris</option>
+        <option value="14">14 Katoris</option>
+        <option value="15">15 Katoris</option>
+       </select>
+       <select name="dumchickenfrac" id="dumchickenfrac">
+        <option value="">&nbsp;</option>
+          <option value=".0">0 Katori</option>
+        <option value=".25">1/4 Katoris</option>
+        <option value=".50">1/2 Katoris</option>
+        <option value=".75">3/4 Katoris</option>
+       </select>
+      </div>
+     </form>
+    </div><!--optcontainer -->
+   </div>
+  </div>
+  <div class="clear">
+  </div>
+  <div class="navigation" data-role="footer" data-position="fixed">
+   <div id="prev"><a href="sweets.html" data-ajax="false"><img src="images/prevarrow.png"/></a>
+   </div>
+   <div id="next">
+    <input name="savenxt" type="button" value="Save & Next" class="savenxt" data-role="none">
+   </div>
+  </div>
+  <div data-role="panel" data-position="right" data-position-fixed="true" data-display="overlay" data-theme="c" id="nav-panel">
+   <ul data-role="listview">
+    <li data-icon="false" class="listitem"><a href="milkpdt.html" data-ajax="false">Milk and milk products</a>
+    </li>
+    <li data-icon="false" class="listitem"><a href="cereal.html" data-ajax="false">Cereal preparations</a>
+    </li>
+    <li data-icon="false" class="listitem"><a href="currydal.html" data-ajax="false">Curry/dal preparations</a>
+    </li>
+    <li data-icon="false" class="listitem"><a href="veg-gravy.html" data-ajax="false">Vegetable - gravy</a>
+    </li>
+    <li data-icon="false" class="listitem"><a href="veg-dry.html" data-ajax="false">Vegetable - dry</a>
+    </li>
+    <li data-icon="false" class="listitem"><a href="snacks.html" data-ajax="false">Savory snacks</a>
+    </li>
+    <li data-icon="false" class="listitem"><a href="sweets.html" data-ajax="false">Sweets</a>
+    </li>
+    <li data-icon="false" class="listitem"><a href="nonveg.html" data-ajax="false">Non-vegetarian foods</a>
+    </li>   
+    <li data-icon="false" class="listitem"><a href="others.html" data-ajax="false">Other preparations</a>
+    </li>
+   </ul>
+  </div>
+ </div>
+</div>
+<!-- /panel -->
+</body>
+</html>
